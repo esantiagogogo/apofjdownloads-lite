@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="package" method="upgrade">
+    <name>APO FJ Downloads Lite</name>
+    <packagename>apofjdownloads</packagename>
+    <version>1.0.0</version>
+    <creationDate>2026-02</creationDate>
+    <author>Apotentia LLC</author>
+    <authorEmail>contact@apotentia.com</authorEmail>
+    <authorUrl>https://apotentia.com</authorUrl>
+    <copyright>(C) 2026 Apotentia LLC. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <description>Download Manager for Joomla 4/5/6. Free edition with 5 MB file size limit. Upgrade to Pro for unlimited files, advanced ACL, logging, rate limiting, and more.</description>
+    <update>https://apotentia.com/updates/apofj-downloads-lite.xml</update>
+
+    <files>
+        <!-- Core component -->
+        <file type="component" id="com_apofjdownloads">com_apofjdownloads.zip</file>
+
+        <!-- Shared library -->
+        <file type="library" id="lib_apofjdownloads">lib_apofjdownloads.zip</file>
+
+        <!-- Plugins (Lite subset) -->
+        <file type="plugin" id="plg_system_apofjdownloads" group="system">plg_system_apofjdownloads.zip</file>
+        <file type="plugin" id="plg_actionlog_apofjdownloads" group="actionlog">plg_actionlog_apofjdownloads.zip</file>
+    </files>
+</extension>

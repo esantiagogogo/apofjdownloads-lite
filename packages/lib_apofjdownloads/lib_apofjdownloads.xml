@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="library" method="upgrade">
+    <name>lib_apofjdownloads</name>
+    <libraryname>apofjdownloads</libraryname>
+    <author>Apotentia LLC</author>
+    <authorEmail>contact@apotentia.com</authorEmail>
+    <authorUrl>https://apotentia.com</authorUrl>
+    <copyright>(C) 2026 Apotentia LLC. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <version>1.0.0</version>
+    <creationDate>2026-02</creationDate>
+    <description>Shared library for APO FJ Downloads - MIME detection, storage, layout engine, tokens, ACL.</description>
+
+    <files folder="src">
+        <folder>Acl</folder>
+        <folder>Edition</folder>
+        <folder>Layout</folder>
+        <folder>Log</folder>
+        <folder>Mime</folder>
+        <folder>Serve</folder>
+        <folder>Storage</folder>
+        <folder>Token</folder>
+        <folder>Upload</folder>
+    </files>
+</extension>

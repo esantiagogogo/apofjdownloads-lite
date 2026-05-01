@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <fieldset name="details">
+        <field name="id"
+               type="hidden" />
+
+        <field name="title"
+               type="text"
+               label="COM_APOFJDOWNLOADS_FIELD_TITLE_LABEL"
+               required="true"
+               size="40"
+               maxlength="255" />
+
+        <field name="body"
+               type="editor"
+               label="COM_APOFJDOWNLOADS_FIELD_LICENSE_BODY_LABEL"
+               filter="safehtml"
+               buttons="true" />
+
+        <field name="require_agree"
+               type="radio"
+               label="COM_APOFJDOWNLOADS_FIELD_REQUIRE_AGREE_LABEL"
+               default="1"
+               class="btn-group">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+        <field name="state"
+               type="list"
+               label="JSTATUS"
+               default="1"
+               class="form-select">
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+            <option value="-2">JTRASHED</option>
+        </field>
+
+        <field name="ordering"
+               type="ordering"
+               label="JFIELD_ORDERING_LABEL" />
+    </fieldset>
+</form>

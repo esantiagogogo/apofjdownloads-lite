@@ -1,0 +1,58 @@
+<div class="apofjdl-download-detail">
+    <article>
+        <h1>{{ download.title }}</h1>
+
+        <div class="d-flex gap-3 text-muted mb-3">
+            {% if download.category_title is defined %}
+                <span>{{ download.category_title }}</span>
+            {% endif %}
+            {% if download.created is defined %}
+                <span>{{ format_date(download.created) }}</span>
+            {% endif %}
+            <span>{{ download.hits ?? 0 }} downloads</span>
+        </div>
+
+        {% if download.description %}
+            <div class="mb-4">{{ download.description|raw }}</div>
+        {% endif %}
+
+        {% if download.version_note %}
+            <p><strong>Version:</strong> {{ download.version_note }}</p>
+        {% endif %}
+
+        {% if download.changelog %}
+            <details class="mb-4">
+                <summary>Changelog</summary>
+                <div class="mt-2">{{ download.changelog|raw }}</div>
+            </details>
+        {% endif %}
+
+        {% if files is not empty %}
+            <h3>Files</h3>
+            <div class="list-group mb-4">
+                {% for file in files %}
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                        <div>
+                            <strong>{{ file.filename }}</strong>
+                            <br>
+                            <small class="text-muted">
+                                {{ format_size(file.size ?? 0) }}
+                                &middot; {{ file.mime_type ?? 'unknown' }}
+                            </small>
+                        </div>
+                        {% if canDownload is defined and canDownload %}
+                            <a href="{{ file.download_url ?? '#' }}" class="btn btn-primary btn-sm">Download</a>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        {% if license is defined and license %}
+            <div class="card mb-4">
+                <div class="card-header">License: {{ license.title }}</div>
+                <div class="card-body">{{ license.body|raw }}</div>
+            </div>
+        {% endif %}
+    </article>
+</div>

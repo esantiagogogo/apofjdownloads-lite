@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <fields name="filter">
+        <field name="search"
+               type="text"
+               label="COM_APOFJDOWNLOADS_FILTER_SEARCH_LABEL"
+               description="COM_APOFJDOWNLOADS_FILTER_SEARCH_DESC"
+               hint="JSEARCH_FILTER" />
+
+        <field name="state"
+               type="status"
+               label="JOPTION_SELECT_PUBLISHED"
+               onchange="this.form.submit();">
+            <option value="">JOPTION_SELECT_PUBLISHED</option>
+        </field>
+
+        <field name="type"
+               type="list"
+               label="COM_APOFJDOWNLOADS_FILTER_LAYOUT_TYPE_LABEL"
+               onchange="this.form.submit();">
+            <option value="">COM_APOFJDOWNLOADS_SELECT_LAYOUT_TYPE</option>
+            <option value="categories_list">COM_APOFJDOWNLOADS_LAYOUT_TYPE_CATEGORIES_LIST</option>
+            <option value="category_view">COM_APOFJDOWNLOADS_LAYOUT_TYPE_CATEGORY_VIEW</option>
+            <option value="download_list">COM_APOFJDOWNLOADS_LAYOUT_TYPE_DOWNLOAD_LIST</option>
+            <option value="download_detail">COM_APOFJDOWNLOADS_LAYOUT_TYPE_DOWNLOAD_DETAIL</option>
+            <option value="download_summary">COM_APOFJDOWNLOADS_LAYOUT_TYPE_DOWNLOAD_SUMMARY</option>
+            <option value="search_results">COM_APOFJDOWNLOADS_LAYOUT_TYPE_SEARCH_RESULTS</option>
+        </field>
+
+        <field name="scope"
+               type="list"
+               label="COM_APOFJDOWNLOADS_FILTER_LAYOUT_SCOPE_LABEL"
+               onchange="this.form.submit();">
+            <option value="">COM_APOFJDOWNLOADS_SELECT_LAYOUT_SCOPE</option>
+            <option value="global">COM_APOFJDOWNLOADS_LAYOUT_SCOPE_GLOBAL</option>
+            <option value="category">COM_APOFJDOWNLOADS_LAYOUT_SCOPE_CATEGORY</option>
+        </field>
+    </fields>
+
+    <fields name="list">
+        <field name="fullordering"
+               type="list"
+               label="JGLOBAL_SORT_BY"
+               default="a.ordering ASC"
+               onchange="this.form.submit();">
+            <option value="">JGLOBAL_SORT_BY</option>
+            <option value="a.ordering ASC">JGRID_HEADING_ORDERING_ASC</option>
+            <option value="a.ordering DESC">JGRID_HEADING_ORDERING_DESC</option>
+            <option value="a.title ASC">JGLOBAL_TITLE_ASC</option>
+            <option value="a.title DESC">JGLOBAL_TITLE_DESC</option>
+            <option value="a.state ASC">JSTATUS_ASC</option>
+            <option value="a.state DESC">JSTATUS_DESC</option>
+            <option value="a.type ASC">COM_APOFJDOWNLOADS_TYPE_ASC</option>
+            <option value="a.type DESC">COM_APOFJDOWNLOADS_TYPE_DESC</option>
+            <option value="a.id ASC">JGRID_HEADING_ID_ASC</option>
+            <option value="a.id DESC">JGRID_HEADING_ID_DESC</option>
+        </field>
+
+        <field name="limit"
+               type="limitbox"
+               label="JGLOBAL_LIST_LIMIT"
+               default="25"
+               onchange="this.form.submit();" />
+    </fields>
+</form>

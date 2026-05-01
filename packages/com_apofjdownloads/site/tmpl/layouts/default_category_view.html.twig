@@ -1,0 +1,36 @@
+<div class="apofjdl-category">
+    {% if category is defined %}
+        <div class="mb-4">
+            <h2>{{ category.title }}</h2>
+            {% if category.description %}
+                <div class="lead">{{ category.description|raw }}</div>
+            {% endif %}
+        </div>
+    {% endif %}
+
+    {% if downloads is not empty %}
+        <div class="list-group">
+            {% for download in downloads %}
+                <a href="{{ download.link ?? '#' }}" class="list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">{{ download.title }}</h5>
+                        <small>{{ format_size(download.total_size ?? 0) }}</small>
+                    </div>
+                    {% if download.description %}
+                        <p class="mb-1 text-truncate">{{ download.description|striptags }}</p>
+                    {% endif %}
+                    <small class="text-muted">
+                        {{ download.file_count ?? 0 }} file{{ (download.file_count ?? 0) != 1 ? 's' : '' }}
+                        &middot; {{ download.hits ?? 0 }} downloads
+                    </small>
+                </a>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="alert alert-info">No downloads in this category.</div>
+    {% endif %}
+
+    {% if pagination is defined and pagination %}
+        <nav class="mt-4">{{ pagination|raw }}</nav>
+    {% endif %}
+</div>

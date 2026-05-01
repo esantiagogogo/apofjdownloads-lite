@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<access component="com_apofjdownloads">
+    <section name="component">
+        <action name="core.admin" title="JACTION_ADMIN" />
+        <action name="core.options" title="JACTION_OPTIONS" />
+        <action name="core.manage" title="JACTION_MANAGE" />
+        <action name="core.create" title="JACTION_CREATE" />
+        <action name="core.delete" title="JACTION_DELETE" />
+        <action name="core.edit" title="JACTION_EDIT" />
+        <action name="core.edit.state" title="JACTION_EDITSTATE" />
+        <action name="core.edit.own" title="JACTION_EDITOWN" />
+        <action name="apofjdl.download" title="COM_APOFJDOWNLOADS_ACTION_DOWNLOAD" />
+        <action name="apofjdl.upload" title="COM_APOFJDOWNLOADS_ACTION_UPLOAD" />
+        <action name="apofjdl.upload.frontend" title="COM_APOFJDOWNLOADS_ACTION_UPLOAD_FRONTEND" />
+        <action name="apofjdl.view.logs" title="COM_APOFJDOWNLOADS_ACTION_VIEW_LOGS" />
+        <action name="apofjdl.manage.layouts" title="COM_APOFJDOWNLOADS_ACTION_MANAGE_LAYOUTS" />
+    </section>
+    <section name="category">
+        <action name="core.create" title="JACTION_CREATE" />
+        <action name="core.delete" title="JACTION_DELETE" />
+        <action name="core.edit" title="JACTION_EDIT" />
+        <action name="core.edit.state" title="JACTION_EDITSTATE" />
+        <action name="core.edit.own" title="JACTION_EDITOWN" />
+        <action name="apofjdl.download" title="COM_APOFJDOWNLOADS_ACTION_DOWNLOAD" />
+        <action name="apofjdl.upload" title="COM_APOFJDOWNLOADS_ACTION_UPLOAD" />
+    </section>
+</access>

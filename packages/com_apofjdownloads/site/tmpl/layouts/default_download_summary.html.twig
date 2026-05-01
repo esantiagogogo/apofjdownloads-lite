@@ -1,0 +1,19 @@
+<div class="apofjdl-download-summary card">
+    <div class="card-body">
+        <h5 class="card-title">
+            <a href="{{ download.link ?? '#' }}">{{ download.title }}</a>
+        </h5>
+        {% if download.description %}
+            <p class="card-text text-truncate">{{ download.description|striptags }}</p>
+        {% endif %}
+        <div class="d-flex justify-content-between align-items-center">
+            <small class="text-muted">
+                {{ format_size(download.total_size ?? 0) }}
+                &middot; {{ download.hits ?? 0 }} downloads
+            </small>
+            {% if canDownload is defined and canDownload and download.link is defined %}
+                <a href="{{ download.link }}" class="btn btn-sm btn-outline-primary">View</a>
+            {% endif %}
+        </div>
+    </div>
+</div>

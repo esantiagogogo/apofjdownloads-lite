@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+    <layout title="COM_APOFJDOWNLOADS_DOWNLOADS_VIEW_DEFAULT_TITLE"
+            option="COM_APOFJDOWNLOADS_DOWNLOADS_VIEW_DEFAULT_DESC">
+        <message>
+            <![CDATA[COM_APOFJDOWNLOADS_DOWNLOADS_VIEW_DEFAULT_DESC]]>
+        </message>
+    </layout>
+</metadata>

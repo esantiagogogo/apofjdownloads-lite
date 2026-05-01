@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <fieldset name="details">
+        <field name="id"
+               type="hidden" />
+
+        <field name="title"
+               type="text"
+               label="COM_APOFJDOWNLOADS_FIELD_TITLE_LABEL"
+               required="true"
+               size="40"
+               maxlength="255" />
+
+        <field name="alias"
+               type="text"
+               label="COM_APOFJDOWNLOADS_FIELD_ALIAS_LABEL"
+               size="40"
+               maxlength="400"
+               hint="JFIELD_ALIAS_PLACEHOLDER" />
+
+        <field name="type"
+               type="list"
+               label="COM_APOFJDOWNLOADS_FIELD_LAYOUT_TYPE_LABEL"
+               required="true"
+               class="form-select">
+            <option value="">COM_APOFJDOWNLOADS_SELECT_LAYOUT_TYPE</option>
+            <option value="categories_list">COM_APOFJDOWNLOADS_LAYOUT_TYPE_CATEGORIES_LIST</option>
+            <option value="category_view">COM_APOFJDOWNLOADS_LAYOUT_TYPE_CATEGORY_VIEW</option>
+            <option value="download_list">COM_APOFJDOWNLOADS_LAYOUT_TYPE_DOWNLOAD_LIST</option>
+            <option value="download_detail">COM_APOFJDOWNLOADS_LAYOUT_TYPE_DOWNLOAD_DETAIL</option>
+            <option value="download_summary">COM_APOFJDOWNLOADS_LAYOUT_TYPE_DOWNLOAD_SUMMARY</option>
+            <option value="search_results">COM_APOFJDOWNLOADS_LAYOUT_TYPE_SEARCH_RESULTS</option>
+        </field>
+
+        <field name="scope"
+               type="list"
+               label="COM_APOFJDOWNLOADS_FIELD_LAYOUT_SCOPE_LABEL"
+               default="global"
+               class="form-select">
+            <option value="global">COM_APOFJDOWNLOADS_LAYOUT_SCOPE_GLOBAL</option>
+            <option value="category">COM_APOFJDOWNLOADS_LAYOUT_SCOPE_CATEGORY</option>
+        </field>
+
+        <field name="category_id"
+               type="categoryedit"
+               label="JCATEGORY"
+               extension="com_apofjdownloads"
+               default="0"
+               showon="scope:category" />
+
+        <field name="state"
+               type="list"
+               label="JSTATUS"
+               default="1"
+               class="form-select">
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+            <option value="2">JARCHIVED</option>
+            <option value="-2">JTRASHED</option>
+        </field>
+
+        <field name="ordering"
+               type="ordering"
+               label="JFIELD_ORDERING_LABEL" />
+
+        <field name="body_twig"
+               type="textarea"
+               label="COM_APOFJDOWNLOADS_FIELD_LAYOUT_BODY_LABEL"
+               description="COM_APOFJDOWNLOADS_FIELD_LAYOUT_BODY_DESC"
+               rows="20"
+               cols="80"
+               filter="raw"
+               class="w-100 font-monospace" />
+
+        <field name="css"
+               type="textarea"
+               label="COM_APOFJDOWNLOADS_FIELD_LAYOUT_CSS_LABEL"
+               description="COM_APOFJDOWNLOADS_FIELD_LAYOUT_CSS_DESC"
+               rows="10"
+               cols="80"
+               filter="raw"
+               class="w-100 font-monospace" />
+    </fieldset>
+</form>
