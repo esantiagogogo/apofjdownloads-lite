@@ -61,6 +61,15 @@ APO FJ Downloads is a secure, full-featured download management extension for Jo
 | 4 sidebar modules | No | Yes |
 | Priority support | No | Yes |
 
+### Pro Pricing
+
+| Plan | Price | Domains |
+|------|-------|---------|
+| **Lite** | Free | Unlimited |
+| **Single Site** | $49/year | 1 |
+| **Agency** | $99/year | 5 |
+| **Unlimited** | $199/year | Unlimited |
+
 [Upgrade to Pro](https://apotentia.com/apo-fj-downloads)
 
 ## Documentation
